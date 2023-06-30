@@ -30,7 +30,7 @@ const addSite=(req,res)=>{
         siteName:req.body.siteName,
         createdBy:req.body.createdBy
     }
-    console.log(site);
+    // console.log(site.siteName);
     client.query(queries.addSites,[site.num,site.siteName,site.createdBy],(error,result)=>{
         if(error){
             throw error;
