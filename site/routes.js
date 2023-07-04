@@ -3,8 +3,15 @@ const controller=require('./controller');
 
 const router=Router();
 
-router.get("/",controller.getSite);
-router.get("/:id",controller.getSiteById);
-router.post("/",controller.addSite);
+//for site
+router.get("/site",controller.getSite);
+router.get("/site/:id",controller.getSiteById);
+router.post("/site/:id",controller.updateSite);
+router.post("/site",controller.addSite);
+
+//for step master
+router.get("/stepMaster",controller.getStep);
+router.get("/stepMaster/:id",controller.getStepById);
+router.post("/stepMaster",controller.addStep);
 
 module.exports=router;

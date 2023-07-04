@@ -11,7 +11,7 @@ app.get("/",(req,res)=>{
     res.send("hello world");
 })
 
-app.use('/getSite',siteRoutes);
+app.use('/',siteRoutes);
 
 
 app.listen(port,()=>{
