@@ -1,5 +1,6 @@
 const express=require('express');
-const siteRoutes=require('./site/routes.js');
+const siteRoutes=require('./app/routes/site.routes.js');
+const stepRoutes=require('./app/routes/step_master.routes.js');
 
 const app=express();
 const port=5000;
@@ -11,7 +12,8 @@ app.get("/",(req,res)=>{
     res.send("hello world");
 })
 
-app.use('/',siteRoutes);
+app.use('/site',siteRoutes);
+app.use('/stepMaster',stepRoutes);
 
 
 app.listen(port,()=>{

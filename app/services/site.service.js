@@ -13,20 +13,9 @@ const updateSites=`UPDATE "S1".site
 SET "updatedOn"=CURRENT_DATE
 WHERE "siteNum"=$1`;    
 
-
-//for step master
-const getSteps=`SELECT "stepNum", "stepName" FROM "S1".step_master`; 
-
-const getStepsById=`SELECT "stepNum", "stepName" FROM "S1".step_master  WHERE "stepNum"=$1`;
-
-const addSteps=`INSERT INTO "S1".step_master("stepNum", "stepName") VALUES ($1, $2)`;
-
 module.exports={
     getSites,
     getSitesById,
     addSites,
-    updateSites,
-    getSteps,
-    getStepsById,
-    addSteps
+    updateSites
 }
