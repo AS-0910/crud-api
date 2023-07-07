@@ -3,7 +3,7 @@ const siteRoutes=require('./app/routes/site.routes.js');
 const stepRoutes=require('./app/routes/step_master.routes.js');
 
 const app=express();
-const port=5000;
+const port=6000;
 
 
 app.use(express.json());
